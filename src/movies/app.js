@@ -1,6 +1,19 @@
 // app.js
-var Movie = require('./db');
+const express = require('express');
+const app = express();
+const Movie = require('./db');
 
-Movie.find({year: 1977}, function(err, varToStoreResult, count) {
-	console.log(varToStoreResult); // <---- variable contains found documents!
+app.set('view engine', 'hbs');
+app.use(express.urlencoded({ extended: false }));
+
+app.get('/movie', function(req, res) {
+    Movie.find({}, function(err, varToStoreResult, count) {
+        console.log(varToStoreResult); // <---- variable contains found documents!
+        
+        res.render('movie', {list:varToStoreResult});
+    });
 });
+
+app.listen(3000);
+
+
