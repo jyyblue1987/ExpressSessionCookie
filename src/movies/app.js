@@ -9,10 +9,11 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/movie', function(req, res) {
     Movie.find({}, function(err, varToStoreResult, count) {
         console.log(varToStoreResult); // <---- variable contains found documents!
-        
+
         res.render('movie', {list:varToStoreResult});
     });
 });
+app.use(express.static('public'));
 
 app.listen(3000);
 
