@@ -11,3 +11,11 @@ table {
     display: table;
     border-collapse: collapse;        
 }
+
+.form-container, h2, h3 {
+    text-align: center;
+}
+
+.table-container {
+    margin-top: 20px;
+}

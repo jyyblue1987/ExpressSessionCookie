@@ -1,4 +1,14 @@
-<div>    
+<div class="form-container">
+    <form action="/movie">
+        <label for="director">Director</label>
+        <input type="text" name="director" />
+        <input type="submit" val="Filter" />
+    </form>
+</div>
+{{#if director}}
+<h3>Showing only movies directed by: {{director}} </h3>
+{{/if}}
+<div class="table-container">    
     <table align="center">
         <thead>
             <tr>
