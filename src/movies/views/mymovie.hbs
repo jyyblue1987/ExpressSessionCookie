@@ -1,14 +1,4 @@
-<h2>Let's Watch Some Movies</h2>
-<div class="form-container">
-    <form action="/movie">
-        <label for="director">Director</label>
-        <input type="text" name="director" />
-        <input type="submit" val="Filter" />
-    </form>
-</div>
-{{#if director}}
-<h3>Showing only movies directed by: {{director}} </h3>
-{{/if}}
+<h2>My Movies</h2>
 <div class="table-container">    
     <table align="center">
         <thead>
@@ -29,8 +19,9 @@
         </tbody>
     </table>
 </div>
+
 <h3>
-    <a href="/movies/add">Add Movie</a>
+    <a href="/movies">All Movies</a>
     &nbsp;&nbsp;&nbsp;
     <a href="/mymovies">My Movie</a>
 </h3>
